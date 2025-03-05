@@ -1,0 +1,45 @@
+baseURL = "https://typonotes.com/books/python/"
+title = "Python 3"
+theme = "hugo-geekdoc"
+
+pluralizeListTitles = false
+
+# Geekdoc required configuration
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+
+# Required if you want to render robots.txt template
+enableRobotsTXT = true
+
+# Needed for mermaid shortcodes
+[markup]
+  [markup.goldmark.renderer]
+    # Needed for mermaid shortcode
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 9
+
+[taxonomies]
+   tag = "tags"
+
+# 去除静态文件前缀
+# md 文件为了引用公共文件， 使用了项目级别绝对路径 /docs/static/logo.png
+[params.static_prefix]
+  name = "/docs"
+
+[params.utteranc]
+    enable = true
+    repo = "tangx/tangx.github.io"    # 存储评论的Repo，格式为 owner/repo
+    issueTerm = "pathname"  #表示你选择以那种方式让github issue的评论和你的文章关联。
+    theme = "github-light" # 样式主题，有github-light和github-dark两种
+
+
+[params]
+    # (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
+    # relative to your 'static/' folder.
+    geekdocLogo = "python.png"
+
+    # 侧边栏折叠
+    geekdocCollapseAllSections = true
