@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>90. 更上一层楼 on Python 3</title><link>https://typonotes.com/books/python/advanced/</link><description>Recent content in 90. 更上一层楼 on Python 3</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://typonotes.com/books/python/advanced/index.xml" rel="self" type="application/rss+xml"/><item><title>1. pytest</title><link>https://typonotes.com/books/python/advanced/pytest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://typonotes.com/books/python/advanced/pytest/</guid><description>pytest https://docs.pytest.org/en/stable/
+安装 Python 和 Python-Debugger 之后， 可以在 VSCode 使用 pytest 进行单元测试
+1. 启用 pytest 在项目 .vscode/settings.json 中添加配置启用 pytest 测试。
+{ &amp;#34;python.testing.pytestArgs&amp;#34;: [ &amp;#34;.&amp;#34; ], &amp;#34;python.testing.unittestEnabled&amp;#34;: false, // 关闭 unittest &amp;#34;python.testing.pytestEnabled&amp;#34;: true, // 启用 pytest } 2. 创建 test 文件 pytest 自动检查并 并发 运行所有测试用例。
+测试文件的编程规则与基本文件一致。 但需要遵循以下命名规则
+测试文件命名规则为 test_{xxx}.py 测试函数命名规则为 test_{func} 测试函数中使用 assert 推断结果。 更多测试规则参考 pytest 官方文档: https://docs.</description></item></channel></rss>
