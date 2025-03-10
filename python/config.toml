@@ -42,4 +42,4 @@ enableRobotsTXT = true
     geekdocLogo = "python.png"
 
     # 侧边栏折叠
-    geekdocCollapseAllSections = true
+    geekdocCollapseAllSections = false

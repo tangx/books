@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>1. 准备知识 on Python 3</title><link>https://typonotes.com/books/python/python/voyage/</link><description>Recent content in 1. 准备知识 on Python 3</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://typonotes.com/books/python/python/voyage/index.xml" rel="self" type="application/rss+xml"/><item><title>1. 模块和包</title><link>https://typonotes.com/books/python/python/voyage/package-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://typonotes.com/books/python/python/voyage/package-module/</guid><description>模块和包 https://docs.python.org/zh-cn/3.13/tutorial/modules.html
-在 python 中， 一个文件就是一个 模块 module
-一个带有 __init__.py 的文件夹就是一个 包 package。
-模块（及其内容） 是最小的 import 单位。 即不能 from pkg1 import pkg2， 再使用 pkg2.module.func(1,2)
+在 python 中， 一个文件就是一个 模块 module 一个带有 __init__.py 的文件夹就是一个 包 package。 3. 模块（及其内容） 是最小的 import 单位。 即不能 from pkg1 import pkg2， 再使用 pkg2.module.func(1,2)
 1. 相对引用 - 同目录 同目录的时候， 建议使用 相对引用。
 $ tree . . ├── __init__.py ├── main.py # 入口文件 └── minus_file.py 举个例子
-# main.py # （相对路径） from . import minus_file # 从包中导入模块 from .</description></item><item><title>2. Python 启动方式</title><link>https://typonotes.com/books/python/python/voyage/execute/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://typonotes.com/books/python/python/voyage/execute/</guid><description>1. 交互终端 在命令行中执行 python 进入交互终端
+# main.py # （相对路径） from . import minus_file # 从包中导入模块 from .minus_file import minus_func # 从模块中导入函数 if __name__ == &amp;#34;__main__&amp;#34;: print(minus_func(10, 5)) print(minus_file.</description></item><item><title>2. Python 启动方式</title><link>https://typonotes.com/books/python/python/voyage/execute/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://typonotes.com/books/python/python/voyage/execute/</guid><description>1. 交互终端 在命令行中执行 python 进入交互终端
 $ python3 Python 3.12.9 (main, Feb 4 2025, 14:38:38) [Clang 16.0.0 (clang-1600.0.26.6)] on darwin Type &amp;#34;help&amp;#34;, &amp;#34;copyright&amp;#34;, &amp;#34;credits&amp;#34; or &amp;#34;license&amp;#34; for more information. &amp;gt;&amp;gt;&amp;gt; 2. 执行文件 单文件应用 可以使用这种方式
 $ python3 main.py 通常会判断 __name__ 的值进行启动。
 def hello(name: string): print(f&amp;#34;Hello, {name}!&amp;#34;) if __name__ == &amp;#34;__main__&amp;#34;: hello(&amp;#34;Python&amp;#34;) 3. 执行模块 当自己创建复杂的 包 或 模块 的时候。
